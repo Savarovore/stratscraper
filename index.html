@@ -1,0 +1,382 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108818582-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js'. new Date());
+		gtag('config'. 'UA-108818582-1');
+	</script>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="stratscraper.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>StratScraper: a visual tool to build a distinctive business strategy</title>
+	<meta name="description" content="An interactive tool to build and communicate distinctive business strategies" />
+	<meta name="keywords" content="competitive analysis, strategy, entrepreneurs, start-up, startup, business, tool, interactive, competition, visualization, graph" />
+</head>
+
+<body>
+	<section id="startDivsContainer">
+		<div id="logoSVG">
+			<svg stroke="white" stroke-width="3px" width="100" height="170">
+				<line x1="50%" x2="100%" y1="0%" y2="33.34%"/>
+				<line x1="100%" x2="50%" y1="33.3333%" y2="66.6666%"/>
+				<line x1="0%" x2="50%" y1="33.34%" y2="0%"/>
+				<line x1="0%" x2="50%" y1="33.3333%" y2="66.6666%"/>
+
+				<line x1="0%" x2="50%" y1="33.3333%" y2="100%"/>
+				<line x1="100%" x2="50%" y1="33.3333%" y2="100%"/>
+				<line x1="50%" x2="50%" y1="66.66666%" y2="100%"/>
+			</svg>
+		</div>
+		<div id="introduction">
+			<h1 id="startButton1" class="startDivsT">StratScraper is a <strong>visual tool</strong><br/>to build and communicate<br/><strong>business strategies</strong>.</h1>
+			<h2 class="startDivsT">Stop forgetting good ideas</h2>
+			<p class="startDivs">We have ideas all the time. How long will we remember them?
+			<br/>StratScraper is the place to sleep on your ideas without the fear of forgetting them.</p>
+			<h2 class="startDivsT">Transform your ideas into strategies</h2>
+			<p class="startDivs">Breaking your ideas into simple elements is the first step to build<br/>a coherent strategy that address your key challenges.</p>
+			<h2 class="startDivsT">Assess their potential rigorously</h2>
+			<p class="startDivs">Map competition against your offer<br/>to spot your unique value proposition.</p>
+			<h2 class="startDivsT">Be reckless</h2>
+			<p class="startDivs">Easily explore and share alternative ideas<br/>to get feedback from people whose opinion matter to you.</p>
+			<div id="caseStudy2">See how it works</div>
+			<p id="contact" class="startDivs">Let's see how we can help each other:<br/>
+				julien.bernou@stratscraper.com
+			</p>
+			<div id="caseStudy">See how it works</div>
+		</div>
+		<i id="home" class="fa fa-home" aria-hidden="true"></i>
+		<div id="landingLogin">Log in</div>
+		<div id="landingSignup">Sign up</div>
+
+		<form id="loginForm" class="form" onSubmit='return false;'>
+			<div class="formFrame">
+				<p class="formElement">
+					<label class="landingFormLabel" for='emailLogin'>email</label><br/>
+					<input id='emailLogin' name='emailLogin' class="landingFormInput" type='email'>
+				</p>
+				<p class="formElement">
+					<label class="landingFormLabel" for='passwordLogin'>password</label><br/>
+					<input id='passwordLogin' class="landingFormInput" name='passwordLogin' type='password'>
+				</p>
+				<div class="validFrame">
+					<div id="loginValid" class="landingValid">Log in</div>
+				</div>
+				<p id="forgottenPassword">I have forgotten my password</p>
+			</div>
+		</form>
+
+		<form id="signupForm" class="form" onSubmit='return false;'>
+		<div class="formFrame">
+			<p class="formElement">
+				<label class="landingFormLabel" for='nameSignup'>name</label><br/>
+				<input class="landingFormInput" id='nameSignup' name='nameSignup' type='text'>
+			</p>
+			<p class="formElement">
+				<label class="landingFormLabel" for='emailSignup'>email</label><br/>
+				<input class="landingFormInput" id='emailSignup' name='emailLogin' type='email'>
+			</p>
+			<p class="formElement">
+				<label class="landingFormLabel" for='passwordSignup'>password</label><br/>
+				<input class="landingFormInput" id='passwordSignup' name='passwordLogin' type='password'>
+			</p>
+			<div class="validFrame">
+				<div id="signupValid" class="landingValid">Sign up</div>
+			</div>
+		</div>
+	</form>
+	</section>
+
+
+
+	<div id="overview">
+		<p id="headTitle">
+			<svg stroke="white" stroke-width="1px" width="20" height="40">
+				<line x1="50%" x2="100%" y1="13%" y2="33.34%"/>
+				<line x1="100%" x2="50%" y1="33.3333%" y2="60%"/>
+				<line x1="0%" x2="50%" y1="33.34%" y2="13%"/>
+				<line x1="0%" x2="50%" y1="33.3333%" y2="60%"/>
+
+				<line x1="0%" x2="50%" y1="33.3333%" y2="100%"/>
+				<line x1="100%" x2="50%" y1="33.3333%" y2="100%"/>
+				<line x1="50%" x2="50%" y1="60%" y2="100%"/>
+			</svg>
+			<span id="stratscraper">StratScraper</span>
+		</p>
+		<div id="settingsFrame">
+			<i id="settings" class="fa fa-cog grey" aria-hidden="true"></i>
+			<ul id="settingsList">
+				<li id="changePassword">Change password</li>
+			</ul>
+		</div>
+
+		<nav id="projectFrame">
+			<div id="projectsDiv"></div>
+			<div id="newProject">+ Project</div>
+		</nav>
+
+		<form id="projectForm" class="overviewForm" onSubmit='return false;'>
+			<i class="fa fa-times" aria-hidden="true"></i>
+			<p class="formElement">
+				<label class="graphFormLabel" for='projectTitle'>Startup / new activity name</label><br/>
+				<input id='projectTitle' name='projectTitle' class="graphFormInput" type='text' placeholder="ex: AirBnB for cats">
+			</p>
+			<p class="formElement">
+				<label class="graphFormLabel" for='projectDescription'>Explain the purpose to future team members</label><br/>
+				<textarea id='projectDescription' class="graphFormInput" name='projectDescription' rows="4" placeholder="ex: AirB&Cats is an app that helps friendly and connected cats find a place to scratch"></textarea>
+			</p>
+			<div class="validFrame">
+				<div id="projectValid" class="elementFormB">Create</i></div>
+			</div>
+		</form>
+
+		<form id="projectEditForm" class="overviewForm" onSubmit='return false;'>
+			<i class="fa fa-times" aria-hidden="true"></i>
+			<p class="formElement">
+				<label class="graphFormLabel" for='projectEditTitle'>Project name</label><br/>
+				<input id='projectEditTitle' name='projectEditTitle' class="graphFormInput" type='text' placeholder="ex: AirBnB for cats">
+			</p>
+			<p class="formElement">
+				<label class="graphFormLabel" for='projectEditDescription'>Explain the purpose to future team members</label><br/>
+				<textarea id='projectEditDescription' class="graphFormInput" name='projectEditDescription' rows="4" placeholder="ex: AirB&Cats is an app that helps friendly and connected cats find a place to scratch"></textarea>
+			</p>
+			<div class="validFrame">
+				<div id="projectEditValid" class="elementFormB">Edit</div>
+			</div>
+		</form>
+
+		<form id="teamForm" class="overviewForm" onSubmit='return false;'>
+			<i class="fa fa-times" aria-hidden="true"></i>
+			<h2>Invite partners to this project. They'll be able to create iterations.</h2>
+			<p class="formElement">
+				<label class="graphFormLabel" for='memberName'>Member name</label><br/>
+				<input id='memberName' name='memberName' class="graphFormInput" type='text'>
+			</p>
+			<p class="formElement">
+				<label class="graphFormLabel" for='memberEmail'>Member email</label><br/>
+				<input id='memberEmail' name='memberEmail' class="graphFormInput" type='text'>
+			</p>
+			<div class="validFrame">
+				<div id="teamValid" class="elementFormB">Send invitation</div>
+			</div>
+			<div id="memberFrame">
+				<p>Members:</p>
+				<ul id="memberList"></ul>
+			</div>
+		</form>
+	</div>
+
+	<div id="graphFrame">
+		<nav id="pivotNav"></nav>
+		<div id="fromBlogToProject">Start your project</div>
+		<nav id="toOverview">
+			<i class="fa fa-folder-open" aria-hidden="true"></i>
+			Projects overview
+		</nav>
+		<div id="graph">
+			<p id="customersPreview" class="preview">
+				A customer segment is group of customers sharing needs and preferences.<br/>Segmenting precisely helps building a focused offering.<br/>Segmentation is usually based on demographics (location, age, gender, number of children ...) or business type (size, sector, growth rate...).
+			</p>
+			<p id="productsPreview" class="preview">
+				Product features are what makes your offer unique.<br/>They are complementary if they contribute to satisfy the same customer need.
+			</p>
+			<p id="resourcesPreview" class="preview">
+				Resources are the materials, capabilities, tools and skills which are essential to your business. Identifying them is key to maximize their use.
+			</p>
+			<p id="monetizationPreview" class="preview">
+				Monetization is how you extract value from your offer: fees, subscriptions, advertizing...<br/>
+				It impacts how customers buy (how often, how much...) and how recurring and predictable your revenues are.
+			</p>
+			<p id="pricePreview" class="preview">
+				Price is not only the most tangible way for your customers to compare you to competition, it's also part of your brand image.<br/> Pricing techniques (bundle offers, rebates...) can be used to sell more, eliminate stocks...
+			</p>
+			<p id="distributionPreview" class="preview">
+				Distribution refers to the channels through which you sell and deliver to customers.
+			</p>
+			<p id="communicationPreview" class="preview">
+				Communication refers to the channels through which you convey messages and get feedback from customers.
+			</p>
+			<p id="productionPreview" class="preview">
+				Production starts with design and ends with building. The shorter the production cycle, the faster the feedback.
+			</p>
+			<p id="directPreview" class="preview">
+				Competitors answers the same customer need as you. Let's see how your different!
+			</p>
+			<form id="elementForm" class="graphForm" onSubmit='return false;'>
+				<p class="formElement">
+					<label class="graphFormLabel" for='elementTitle'>Short title</label><br/>
+					<input id='elementTitle' name='elementTitle' class="graphFormInput" type='text'>
+				</p>
+				<p class="formElement">
+					<label class="graphFormLabel" for='forceRange'><span id="rangeEquiv"></span></label><br/>
+					<input id="forceRange" type="range" step="1" min="1" max="5">
+				</p>
+				<div class="validFrame">
+					<div id="otherElement" class="elementFormB">Add another element</div>
+					<div id="elementValid" class="elementFormB">Valid</div>
+				</div>
+			</form>
+
+			<form id="elementEditForm" class="graphForm" onSubmit='return false;'>
+				<i class="fa fa-times" aria-hidden="true"></i>
+				<p class="formElement">
+					<label class="graphFormLabel" for='elementEditTitle'>Short title</label><br/>
+					<input id='elementEditTitle' name='elementEditTitle' class="graphFormInput" type='text'>
+				</p>
+				<p class="formElement">
+					<label class="graphFormLabel" for='elementEditDescription'>
+						<span id="customersEditQuestion" class="editQuestions">What's special about that segment?</span>
+						<span id="productsEditQuestion" class="editQuestions">Why do you need that feature?</span>
+						<span id="resourcesEditQuestion" class="editQuestions">How will you manage that resource?</span>
+						<span id="monetizationEditQuestion" class="editQuestions">How does that fit with your general strategy?</span>
+						<span id="priceEditQuestion" class="editQuestions">What motivates your price?</span>
+						<span id="distributionEditQuestion" class="editQuestions">What's the rationale behind that?</span>
+						<span id="communicationEditQuestion" class="editQuestions">How will that make a difference?</span>
+						<span id="productionEditQuestion" class="editQuestions">What does it imply on your whole business?</span>
+					</label>
+					<textarea id='elementEditDescription' class="graphFormInput" name='elementEditDescription' rows="3" placeholder=""></textarea>
+				</p>
+				<p class="formElement">
+					<label class="graphFormLabel" for='forceEditRange'><span id="rangeEditEquiv"></span></label><br/>
+					<input id="forceEditRange" type="range" step="1" min="1" max="5">
+				</p>
+				<div class="validFrame">
+					<div id="elementEditValid" class="elementFormB">Edit</div>
+				</div>
+			</form>
+
+			<form id="compEditForm" class="graphForm" onSubmit='return false;'>
+				<i class="fa fa-times" aria-hidden="true"></i>
+				<p class="formElement">
+					<label class="graphFormLabel" for='compEditTitle'>Competitor name</label><br/>
+					<input id='compEditTitle' name='compEditTitle' class="graphFormInput" type='text'>
+				</p>
+				<p class="formElement">
+					<label class="graphFormLabel" for='compEditDescription'>
+						Why do you have an edge against this competitor?
+					</label>
+					<textarea id='compEditDescription' class="graphFormInput" name='compEditDescription' rows="3" placeholder=""></textarea>
+				</p>
+				<div class="validFrame">
+					<div id="compEditValid" class="elementFormB">Edit</div>
+				</div>
+			</form>
+
+			<form id="compForm" class="graphForm" onSubmit='return false;'>
+				<p class="formElement">
+					<label class="landingFormLabel" for='compTitle'>Name</label><br/>
+					<input id='compTitle' name='compTitle' type='text' class='graphFormInput'>
+				</p>
+				<div class="validFrame">
+					<div id="compValid" class="elementFormB">Valid</div>
+				</div>
+			</form>
+			<div id="graphHeader">
+				<div id="addTrigger">+</div>
+				<div id="addButtonFrame">
+					<div id="customers" class="addButton"><i class="fa fa-address-card" aria-hidden="true"></i>Customer segment</div>
+					<div id="products" class="addButton"><i class="fa fa-rocket" aria-hidden="true"></i>Product feature</div>
+					<div id="resources" class="addButton"><i class="fa fa-plug" aria-hidden="true"></i>Resource</div>
+					<div id="monetization" class="addButton"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Monetization</div>
+					<div id="price" class="addButton"><i class="fa fa-money" aria-hidden="true"></i>Price</div>
+					<div id="distribution" class="addButton"><i class="fa fa-truck" aria-hidden="true"></i>Distribution</div>
+					<div id="communication" class="addButton"><i class="fa fa-bullhorn" aria-hidden="true"></i>Communication</div>
+					<div id="production" class="addButton"><i class="fa fa-industry" aria-hidden="true"></i>Production</div>
+					<div id="direct" class="compAddButton greyB"><i class="fa fa-pie-chart" aria-hidden="true"></i>Competitor</div>
+				</div>
+			</div>
+
+			<div id="competitorNames"></div>
+			<p id="circleRadioDetail"></p>
+			<p class="conceptExplanations">
+				This graph summarizes Nintendo's strategy when it launched the wii.
+				<br/><i class="fa fa-arrow-right conceptExplanationsArrow" aria-hidden="true"></i>
+			</p>
+			<p class="conceptExplanations">
+				Each bar represents a key strategy element. The bigger the bar, the more important the element is.
+				<br/><i class="fa fa-arrow-right conceptExplanationsArrow" aria-hidden="true"></i>
+			</p>
+			<p class="conceptExplanations">
+				The circles represent competitors.<br/>The distinctive elements of your strategy are highlighted in green and non distinctive elements in red.
+				<br/><i class="fa fa-arrow-right conceptExplanationsArrow" aria-hidden="true"></i>
+			</p>
+
+			<form id="controlPopUpDiv" onSubmit='return false;'>
+				<i id="toElementFormButton" class="fa fa-pencil-square-o grey" aria-hidden="true"></i>
+				<br/>
+				<i id="withdrawButton" class="fa fa-trash-o grey" aria-hidden="true"></i>
+				<br/>
+				<i id="increaseForceButton" class="fa fa-arrow-up grey" aria-hidden="true"></i>
+				<br/>
+				<i id="decreaseForceButton" class="fa fa-arrow-down grey" aria-hidden="true"></i>
+			</form>
+
+			<svg id="graphSVG" xmlns="http://www.w3.org/2000/svg" version='1.1' baseProfile='full' height='590' width='100%'>
+				<g id="barG"></g>
+			</svg>
+
+			<aside id="addFrameInfo" class="info">Build your business<br/> with these categories!</aside>
+			<aside id="barClick" class="info">Click the bar<br/>to select/deselect it</aside>
+			<aside id="compClick" class="info">Highlight<br/>and hide the competitor</aside>
+
+		</div>
+	</div>
+
+	<form id="changePasswordForm" class="forms" onSubmit='return false;'>
+		<div class="bkgd"></div>
+		<div class="frame">
+			<h2 class="frameTitle">Change password</h2>
+			<p class="formElement">
+				<label for='currentPassword'>Current password</label><br/>
+				<input id='currentPassword' name='currentPassword' class='textInputA' type='password'>
+			</p>
+			<p class="formElement">
+				<label for='newPassword'>New password</label><br/>
+				<input id='newPassword' class="textInputA" name='newPassword' type='password'>
+			</p>
+			<div class="validFrame">
+				<div class="valid"><i id="changePasswordValid" class="fa fa-arrow-right fa-3x golden" aria-hidden="true"></i></div>
+			</div>
+		</div>
+	</form>
+
+	<form id="forgottenPasswordForm" class="forms" onSubmit='return false;'>
+		<div class="bkgd"></div>
+		<div class="frame">
+			<h2 class="frameTitle">Obtain password</h2>
+			<p class="formElement">
+				<label for='getBackEmail'>email</label><br/>
+				<input id='getBackEmail' name='getBackEmail' class='textInputA' type='email'>
+			</p>
+			<div class="validFrame">
+				<div class="valid"><i id="forgottenPasswordValid" class="fa fa-arrow-right fa-3x golden" aria-hidden="true"></i></div>
+			</div>
+		</div>
+	</form>
+
+	<form id="pivotForm" class="forms" onSubmit='return false;'>
+		<div class="bkgd"></div>
+		<div class="frame">
+			<h2 class="frameTitle">+ pivot based on <span id="pivotBasis"></span></h2>
+			<div class="tips">
+				<h2>Did you know IKEA started by selling paper through mail order?</h2>
+				<p>Use pivots to explore new ideas on the basis of an existing board.</p>
+			</div>
+			<p class="formElement">
+				<label for='pivotTitle'>Title</label><br/>
+				<input id='pivotTitle' name='pivotTitle' class='textInputA' type='text' placeholder="scenario 43849">
+			</p>
+			<div class="validFrame">
+				<div id="pivotValid" class="valid"><i class="fa fa-arrow-right fa-3x golden" aria-hidden="true"></i></div>
+			</div>
+		</div>
+	</form>
+
+	<script type="text/javascript" src="stratscraper.js"></script>
+
+</body>
+</html>
